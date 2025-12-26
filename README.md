@@ -19,4 +19,4 @@ Es un proyecto más allá de la programación: es un símbolo de cariño y agrad
 
 ## 💌 Dedicado
 
-Para usted, mi amor, **Maria José Marroquín Pérez** ❤️
+Para usted, mi amor, **Maria José Marroquin Pérez** ❤️

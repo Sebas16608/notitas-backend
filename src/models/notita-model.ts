@@ -6,7 +6,7 @@ class Notita extends Model {
     declare title: string;
     declare content: string;
     declare userId: string;
-}
+};
 
 Notita.init(
 {

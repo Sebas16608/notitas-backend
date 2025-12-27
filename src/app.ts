@@ -14,8 +14,13 @@ app.get("/", (req: Request, res: Response) => {
     res.json({
         title: "Holaa Mi amosito",
         mensaje: "Bienvenida",
+        endpoints: "/notita"
     });
 });
+
+// Rutas
+import router from "./routes/notita-routes";
+app.use("/notita", router);
 
 // DATABASE
 import sequelize from "./config/database";

@@ -7,6 +7,4 @@ const sequelize = new Sequelize({
     logging: false,
 });
 
-import "../models/associations";
-
 export default sequelize;

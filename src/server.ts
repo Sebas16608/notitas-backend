@@ -1,6 +1,24 @@
 import app from "./app";
-const port: number = 3000;
+import sequelize from "./config/database";
 
-app.listen(port, () => {
-    console.log(`servidor corriendo en http://localhost:${port}`);
-});
+// IMPORTAR MODELOS
+import "./models/users";
+import "./models/notita-model";
+import "./models/associations";
+
+const PORT = 3000;
+
+(async () => {
+    try {
+        await sequelize.authenticate();
+        await sequelize.sync({ force: false });
+
+        console.log("DB conectada");
+
+        app.listen(PORT, () => {
+            console.log(`Servidor corriendo en http://localhost:${PORT}`);
+        });
+    } catch (error) {
+        console.error("Error al iniciar el servidor:", error);
+    }
+})();

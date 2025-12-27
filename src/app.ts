@@ -1,6 +1,8 @@
-import express, { Express, Request, Response } from "express";
+import express, { Request, Response } from "express";
 import morgan from "morgan";
 import cors from "cors";
+
+import router from "./routes/notita-routes";
 
 const app = express();
 
@@ -19,17 +21,6 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 // Rutas
-import router from "./routes/notita-routes";
 app.use("/notita", router);
-
-// DATABASE
-import sequelize from "./config/database";
-import Notita from "./models/notita-model";
-import User from "./models/user";
-import "./models/associations";
-
-sequelize.sync({ force: false })
-    .then(() => console.log("DB conectada"))
-    .catch(err => console.log("Error al sincronizar la DB", err));
 
 export default app;

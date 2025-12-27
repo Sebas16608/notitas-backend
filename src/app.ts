@@ -17,4 +17,14 @@ app.get("/", (req: Request, res: Response) => {
     });
 });
 
+// DATABASE
+import sequelize from "./config/database";
+import Notita from "./models/notita-model";
+import User from "./models/user";
+import "./models/associations";
+
+sequelize.sync({ force: false })
+    .then(() => console.log("DB conectada"))
+    .catch(err => console.log("Error al sincronizar la DB", err));
+
 export default app;

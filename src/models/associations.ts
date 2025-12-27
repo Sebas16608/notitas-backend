@@ -1,4 +1,4 @@
-import User from "./user";
+import User from "./users";
 import Notita from "./notita-model";
 
 User.hasMany(Notita, {

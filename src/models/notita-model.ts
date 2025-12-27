@@ -30,7 +30,7 @@ Notita.init(
         type: DataTypes.STRING,
         allowNull: false,
         references: {
-            model: "Users", // ⚠️ normalmente es plural
+            model: "Users",
             key: "id",
         },
         onUpdate: "CASCADE",

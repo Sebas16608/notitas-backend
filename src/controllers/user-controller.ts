@@ -50,5 +50,21 @@ export const putUser = async (req: Request, res: Response) => {
     } catch (err) {
         console.log(err);
         return res.status(400).json({ error: "Bad Request" });
-    }
-}
+    };
+};
+
+export const deleteUser = async (req: Request, res: Response) => {
+    try {
+        const { id } = req.params;
+        const user = await User.findByPk(id);
+        if (!user) return res.status(404).json({ error: "Not Found" });
+
+        await user.destroy();
+        return res.status(204).json({ error: "No content"});
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json({ error: "Internal Server Error" });
+    };
+};
+
+export default { getAllUsers, getUserById, postUser, putUser, deleteUser };

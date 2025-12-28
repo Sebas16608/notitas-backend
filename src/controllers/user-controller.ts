@@ -33,3 +33,22 @@ export const postUser = async (req: Request, res: Response) => {
         return res.status(400).json({ error: "Bad Request" });
     };
 };
+
+export const putUser = async (req: Request, res: Response) => {
+    try {
+        const { id } = req.params;
+        const user = await User.findByPk(id);
+        if (!user) return res.status(404).json({ error: "Not Found" });
+
+        const { name, email, password } = req.body;
+        user.name = name ?? user.name;
+        user.email = email ?? user.email;
+        user.password = password ?? user.password;
+
+        await user.save();
+        return res.json(user);
+    } catch (err) {
+        console.log(err);
+        return res.status(400).json({ error: "Bad Request" });
+    }
+}

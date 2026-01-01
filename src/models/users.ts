@@ -30,7 +30,7 @@ User.init({
         }
     },
     password: {
-        type: DataTypes.STRING(10),
+        type: DataTypes.STRING(100),
         allowNull: false,
         validate: {
             len: [1, 10]
@@ -41,6 +41,7 @@ User.init({
     sequelize,
     modelName: "User",
     tableName: "User",
+    freezeTableName: true,
 
     hooks: {
         beforeCreate: async (user: User) => {
@@ -49,7 +50,7 @@ User.init({
         },
         beforeUpdate: async (user: User) => {
             if (user.changed("password")) {
-                const salt = await bcrypt.genSalt(10);
+                const salt = await bcrypt.genSalt(6);
                 user.password = await bcrypt.hash(user.password, salt);
             }
         },

@@ -27,7 +27,8 @@ export const postNotita = async (req: Request, res: Response) => {
     try {
         const { title, content, userId } = req.body;
 
-        const notita = await Notita.create({ title, content,userId });
+        const notita = await Notita.create({ title, content, userId });
+        return res.status(201).json(notita);
     } catch (err) {
         console.log(err);
         return res.status(400).json({ error: "Bad Request"})

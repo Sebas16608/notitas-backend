@@ -20,7 +20,7 @@ app.get("/", (req: Request, res: Response) => {
         title: "Holaa Mi amosito",
         mensaje: "Bienvenida",
         endpoints: {
-            auth: "/auth"
+            auth: "/auth",
             notita: "/notita",
             user: "/user"
         }

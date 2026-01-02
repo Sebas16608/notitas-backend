@@ -5,6 +5,7 @@ import "dotenv/config";
 
 import NotitaRouter from "./routes/notita-routes";
 import UserRouter from "./routes/user-routes";
+import AuthRouter from "./routes/auth-router";
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.get("/", (req: Request, res: Response) => {
         title: "Holaa Mi amosito",
         mensaje: "Bienvenida",
         endpoints: {
+            auth: "/auth"
             notita: "/notita",
             user: "/user"
         }
@@ -28,5 +30,6 @@ app.get("/", (req: Request, res: Response) => {
 // Rutas
 app.use("/notita", NotitaRouter);
 app.use("/user", UserRouter);
+app.use("/auth", AuthRouter)
 
 export default app;

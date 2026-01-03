@@ -11,7 +11,7 @@ const PORT = 3000;
 (async () => {
     try {
         await sequelize.authenticate();
-        await sequelize.sync({ force: true });
+        await sequelize.sync();
 
         console.log("DB conectada");
 

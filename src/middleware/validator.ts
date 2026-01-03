@@ -10,7 +10,7 @@ export function validateCreateUser (
     if (!email || !password) {
         return res.status(400).json({ mensaje: "Email y password requeridos" });
     };
-    if (password.lenght < 6) {
+    if (password.length < 6) {
         return res.status(400).json({ mensaje: "La contraseña es muy corta" });
     }
     next();

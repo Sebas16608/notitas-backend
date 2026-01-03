@@ -20,7 +20,7 @@ app.get("/", (req: Request, res: Response) => {
         title: "Holaa Mi amosito",
         mensaje: "Bienvenida",
         endpoints: {
-            auth: "/auth",
+            auth: "/login",
             notita: "/notita",
             user: "/user"
         }
@@ -30,6 +30,6 @@ app.get("/", (req: Request, res: Response) => {
 // Rutas
 app.use("/notita", NotitaRouter);
 app.use("/user", UserRouter);
-app.use("/auth", AuthRouter)
+app.use("/login", AuthRouter)
 
 export default app;

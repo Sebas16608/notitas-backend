@@ -7,7 +7,7 @@ export const loguinUser = async (req: Request, res: Response) => {
     const { email, password } = req.body;
 
     try {
-        const user = await User.findOne({ where: email });
+        const user = await User.findOne({ where: { email } });
         if (!user) return res.status(400).json({ mensaje: "El usuario no existe" })
 
         const isMatch = await bcrypt.compare(password, user.password);
@@ -19,7 +19,7 @@ export const loguinUser = async (req: Request, res: Response) => {
             { expiresIn: "1h" }
         );
 
-        return res.json(token);
+        return res.json({ token });
     } catch (error) {
         console.log(error);
         return res.status(500).json({ error: "Internal Server Error" });

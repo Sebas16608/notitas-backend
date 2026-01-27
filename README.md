@@ -1,22 +1,29 @@
 # 📝 Notitas App Backend
 
-Backend en **TypeScript** para la app de notitas, un proyecto personal lleno de cariño y recuerdos.  
+Backend desarrollado en C# con ASP.NET Core Web API para la app de notitas, un proyecto personal lleno de cariño y recuerdos.
 
----
+Inicialmente creado en TypeScript, ahora migrado a ASP.NET para una estructura más robusta, tipada y escalable 🚀
 
 ## 🌟 Historia
 
-Esta app nace como un proyecto personal y un **homenaje a mi novia** 💌.  
+Esta app nace como un proyecto personal y un homenaje a mi novia 💌.
 
-Cuando nos conocimos, empezamos enviándonos **cartitas normales**, preguntando cómo estábamos ✉️.  
-Con el tiempo, esas cartitas se volvieron más **cariñosas** ❤️ y así comenzó nuestra relación.  
-Seguimos intercambiando **cartas de amor**, y este proyecto es un reflejo de esos pequeños momentos que quiero conservar ✨.  
+Cuando nos conocimos, empezamos enviándonos cartitas normales, preguntando cómo estábamos ✉️.
+Con el tiempo, esas cartitas se volvieron más cariñosas ❤️ y así comenzó nuestra relación.
 
-Cada nota que se cree en esta app representa un pensamiento, un recuerdo o un instante que quiero guardar y compartir con ella.  
-Es un proyecto más allá de la programación: es un símbolo de cariño y agradecimiento por **seguirme el juego**, por todo el amor y la paciencia que tiene conmigo 🌹.  
+Seguimos intercambiando cartas de amor, y este proyecto es un reflejo de esos pequeños momentos que quiero conservar ✨.
 
----
+Cada nota que se cree en esta app representa un pensamiento, un recuerdo o un instante que quiero guardar y compartir con ella.
+Es un proyecto más allá de la programación: es un símbolo de cariño y agradecimiento por seguirme el juego, por todo el amor y la paciencia que tiene conmigo 🌹.
+
+## ⚙️ Tecnologías
+- C#
+- ASP.NET Core Web API
+- Entity Framework Core
+- Arquitectura basada en Controllers, DTOs y ORM
+- API RESTful
 
 ## 💌 Dedicado
 
-Para usted, mi amor, **Maria José Marroquin Pérez** ❤️
+Para usted, mi amor,
+María José Marroquín Pérez ❤️

@@ -6,5 +6,6 @@ namespace Notitas.Model
         public required string Title { get; set; }
         public required string Content { get; set; }
         public int UserId { get; set; }
+        public Users.Model.User? User { get; set; }
     }
 }
